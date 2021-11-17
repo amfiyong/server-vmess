@@ -152,7 +152,7 @@ func (s *Server) Close() {
 	defer s.access.Unlock()
 	err := s.service.Close()
 	if err != nil {
-		log.Panicf("server Close fialed: %s", err)
+		log.Fatal("server Close failed: %s", err)
 	}
 	log.Infoln("server close")
 }
